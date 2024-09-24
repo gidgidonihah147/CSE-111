@@ -1,0 +1,123 @@
+123
+Current Date: 2024-09-23
+Width of the tire: 184
+Aspect ratio of the tire: 50
+Diameter of the wheel: 4
+Volume of the tire: 10.3
+Current Date: 2024-09-23
+Width of the tire: 185
+Aspect ratio of the tire: 50
+Diameter of the wheel: 14
+Volume of the tire: 24.09
+
+Current Date: 2024-09-23
+Width of the tire: 185
+Aspect ratio of the tire: 50
+Diameter of the wheel: 14
+Volume of the tire: 24.09
+
+Current Date: 2024-09-23
+Width of the tire: 185
+Aspect ratio of the tire: 50
+Diameter of the wheel: 14
+Volume of the tire: 24.09
+
+Current Date: 2024-09-23
+Width of the tire: 185
+Aspect ratio of the tire: 50
+Diameter of the wheel: 14
+Volume of the tire: 24.09
+Phone number: 123-123-132
+
+Current Date: 2024-09-23
+Width of the tire: 185
+Aspect ratio of the tire: 50
+Diameter of the wheel: 14
+Volume of the tire: 24.09
+Phone number: 
+
+Current Date: 2024-09-23
+Width of the tire: 185
+Aspect ratio of the tire: 50
+Diameter of the wheel: 14
+Volume of the tire: 24.09
+Phone number: 
+
+Current Date: 2024-09-23
+Width of the tire: 185
+Aspect ratio of the tire: 50
+Diameter of the wheel: 14
+Volume of the tire: 24.09
+Phone number: 
+
+Current Date: 2024-09-23
+Width of the tire: 185
+Aspect ratio of the tire: 50
+Diameter of the wheel: 14
+Volume of the tire: 24.09
+Phone number: y
+
+Current Date: 2024-09-23
+Width of the tire: 180
+Aspect ratio of the tire: 50
+Diameter of the wheel: 12
+Volume of the tire: 20.09
+Phone number: 1
+
+Current Date: 2024-09-23
+Width of the tire: 180
+Aspect ratio of the tire: 50
+Diameter of the wheel: 12
+Volume of the tire: 20.09
+Phone number: 12315215
+
+Current Date: 2024-09-23
+Width of the tire: 180
+Aspect ratio of the tire: 50
+Diameter of the wheel: 12
+Volume of the tire: 20.09
+
+Current Date: 2024-09-23
+Width of the tire: 180
+Aspect ratio of the tire: 50
+Diameter of the wheel: 12
+Volume of the tire: 20.09
+
+Current Date: 2024-09-23
+Width of the tire: 180
+Aspect ratio of the tire: 50
+Diameter of the wheel: 12
+Volume of the tire: 20.09
+
+Current Date: 2024-09-23
+Width of the tire: 180
+Aspect ratio of the tire: 50
+Diameter of the wheel: 114
+Volume of the tire: 151.95
+
+Current Date: 2024-09-23
+Width of the tire: 180
+Aspect ratio of the tire: 50
+Diameter of the wheel: 14
+Volume of the tire: 22.68
+Phone number: 
+
+Current Date: 2024-09-23
+Width of the tire: 180
+Aspect ratio of the tire: 50
+Diameter of the wheel: 14
+Volume of the tire: 22.68
+
+Current Date: 2024-09-23
+Width of the tire: 185
+Aspect ratio of the tire: 50
+Diameter of the wheel: 14
+Volume of the tire: 24.09
+Phone number: 1231231234
+
+Current Date: 2024-09-23
+Width of the tire: 185
+Aspect ratio of the tire: 50
+Diameter of the wheel: 14
+Volume of the tire: 24.09
+Phone number: 1234531562
