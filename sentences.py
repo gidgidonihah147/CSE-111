@@ -1,3 +1,4 @@
+#-------------------WEEK 03-------------------
 # Purpose
 # Prove that you can write functions with parameters and call those functions multiple times with arguments.
 
@@ -42,11 +43,45 @@
 # get_verb
 # You may add other functions if you want. The functions get_determiner, get_noun, and get_verb, must randomly choose a word from a list of words and return the randomly chosen word. All the functions that you must write for this milestone assignment are described in the Steps section below.
 
+#-------------------WEEK 04-------------------
+# Problem Statement
+# In English, a preposition is a word used to express spatial or temporal relations, such as “in”, “over”, and “before”. A prepositional phrase is group of words that begins with a preposition and includes a noun. For example:
 
+# above the water
+# in the kitchen
+# after the meeting
+# Assignment
+# Write the second half of a Python program that generates simple English sentences that you began in the previous lesson’s prove milestone. As part of the previous lesson’s prove milestone, you wrote a program that generates English sentences with three parts: a determiner, a noun, and a verb. During this prove assignment, you will add functions so that your program generates sentences with four parts:
+
+# a determiner
+# a noun
+# a verb
+# a prepositional phrase
+# For example:
+
+# One girl talked for the car.
+# A bird drinks off one child.
+# The child will run on the car.
+# Some dogs drank above many rabbits.
+# Some children laugh at many dogs.
+# Some rabbits will talk about some cats.
+# To complete this prove assignment, your program must include at least these seven functions:
+
+# main
+# make_sentence
+# get_determiner
+# get_noun
+# get_verb
+# get_preposition
+# get_prepositional_phrase
+# You may add other functions if you find them helpful. The get_preposition function must randomly choose a preposition from a list and return the randomly chosen preposition. The get_prepositional_phrase function must make a prepositional phrase by calling the get_preposition, get_determiner, and get_noun functions.
+
+ #Week 03 Assignment
 import random
 
+ #Week 03 Assignment
 def main():
-    #Looping through make_sentence with each of the different versions of the sentence. Only using 1 variable as we can replace the value each time.
+    #Looping through make_sentence with each of the different versions of the sentence. Only using 1 variable as we can replace the value each time. #Week 03 Assignment
     sentence = make_sentence(1, "past")
     print(sentence)
     sentence = make_sentence(1, "present")
@@ -75,17 +110,17 @@ def get_determiner(quantity):
             noun.
     Return: a randomly chosen determiner.
     """
-    #Output either a single or multiple based on the quantity
+    #Output either a single or multiple based on the quantity #Week 03 Assignment
     if quantity == 1:
         words = ["a", "one", "the"]
     else:
         words = ["some", "many", "the"]
 
-    # Randomly choose and return a determiner.
+    # Randomly choose and return a determiner. #Week 03 Assignment
     word = random.choice(words)
     return word
 
-
+ #Week 03 Assignment
 def get_noun(quantity):
     """Return a randomly chosen noun.
     If quantity is 1, this function will
@@ -102,17 +137,17 @@ def get_noun(quantity):
             the returned noun is single or plural.
     Return: a randomly chosen noun.
     """
-    #Output either a single or multiple based on the quantity
+    #Output either a single or multiple based on the quantity #Week 03 Assignment
     if quantity ==1:
         nouns = ["bird", "boy", "car", "cat", "child", "dog", "girl", "man", "rabbit", "woman"]
     else:
         nouns = ["birds", "boys", "cars", "cats", "children", "dogs", "girls", "men", "rabbits", "women"]
     
-    # Randomly choose and return a determiner.
+    # Randomly choose and return a determiner. #Week 03 Assignment
     noun = random.choice(nouns)
     return noun
 
-
+ #Week 03 Assignment
 def get_verb(quantity, tense):
     """Return a randomly chosen verb. If tense is "past",
     this function will return one of these ten verbs:
@@ -139,7 +174,7 @@ def get_verb(quantity, tense):
             either "past", "present" or "future".
     Return: a randomly chosen verb.
     """
-    #Output a different verb list to be random chosen based on the tense chosen
+    #Output a different verb list to be random chosen based on the tense chosen #Week 03 Assignment
     if tense == "past":
         verbs = ["drank", "ate", "grew", "laughed", "thought", "ran", "slept", "talked", "walked", "wrote"]
     elif tense == "present" and quantity == 1:
@@ -153,17 +188,34 @@ def get_verb(quantity, tense):
     verb = random.choice(verbs)
     return verb
 
+ #Week 04 Assignment
+def get_preposition():
+    """Return a randomly chosen preposition from this list of prepositions:
+    "about", "above", "across", "after", "along", "around", "at", "before", "behind", "below", "beyond", "by", "despite", "except", "for", "from", "in", "into", "near", "of", "off", "on", "onto", "out", "over", "past", "to", "under", "with", "without"
+    Return: a randomly chosen preposition."""
+    prep_words = ["about", "above", "across", "after", "along", "around", "at", "before", "behind", "below", "beyond", "by", "despite", "except", "for", "from", "in", "into", "near", "of", "off", "on", "onto", "out", "over", "past", "to", "under", "with", "without"]
+    word = random.choice(prep_words)
+    return word
+
+ #Week 04 Assignment
+def get_prepositional_phrase(quantity):
+    """Build and return a prepositional phrase composed of three words: a preposition, a determiner, and a noun by calling the get_preposition, get_determiner, and get_noun functions.
+    Parameter
+        quantity: an integer that determines if the determiner and noun in the prepositional phrase returned from this function should be single or pluaral.
+    Return: a prepositional phrase."""
+    determiner = get_determiner(quantity)
+    noun = get_noun(quantity)
+    preposition = get_preposition()
+    phrase = (f"{preposition} {determiner} {noun}")
+    return phrase
+
+#Week 03 Assignment
 def make_sentence(quantity, tense):
-    """Build and return a sentence with three words:
-    a determiner, a noun, and a verb. The grammatical
-    quantity of the determiner and noun will match the
-    number in the quantity parameter. The grammatical
-    quantity and tense of the verb will match the number
-    and tense in the quantity and tense parameters.
-    """
-    #Combine all the other functions that have been created to output a sentence
-    sentence = f"{get_determiner(quantity).capitalize()} {get_noun(quantity)} {get_verb(quantity, tense)}."
+    """Build and return a sentence with three words: a determiner, a noun, and a verb. The grammatical quantity of the determiner and noun will match the number in the quantity parameter. The grammatical quantity and tense of the verb will match the number and tense in the quantity and tense parameters."""
+    #Combine all the other functions that have been created to output a sentence #Week 03 Assignment
+    sentence = f"{get_determiner(quantity).capitalize()} {get_noun(quantity)} {get_verb(quantity, tense)} {get_prepositional_phrase(quantity)} {get_prepositional_phrase(quantity)}."
     return sentence
 
 
+ #Week 03 Assignment
 main()
