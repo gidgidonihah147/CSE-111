@@ -54,7 +54,7 @@ def test_pressure_loss_from_pipe():
     assert pressure_loss_from_pipe(0.286870, 1000.00, 0.013, 1.65) == approx(-61.576, rel=0.001)
     assert pressure_loss_from_pipe(0.286870, 1800.75, 0.013, 1.65) == approx(-110.884, rel=0.001)
 
-#-----------------Step 8---------------#
+#-----------------Step 9---------------#
 # Copy and paste the following code at the bottom of your test_water_flow.py file.
 
 # Call the main function that is part of pytest so that the
