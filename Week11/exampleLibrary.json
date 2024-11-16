@@ -1,0 +1,8 @@
+[
+    {"title": "The Lord of the Rings", "author": "J.R.R. Tolkien", "genre": "Fantasy", "timestamp": "EXAMPLE, no timestamp"},
+    {"title": "Harry Potter and the Sorcerer's Stone", "author": "J.K. Rowling", "genre": "Fantasy", "timestamp": "EXAMPLE, no timestamp"},
+    {"title": "The Hitchhiker's Guide to the Galaxy", "author": "Douglas Adams", "genre": "Science Fiction", "timestamp": "EXAMPLE, no timestamp"},
+    {"title": "The Da Vinci Code", "author": "Dan Brown", "genre": "Thriller", "timestamp": "EXAMPLE, no timestamp"},
+    {"title": "The Book Thief", "author": "Markus Zusak", "genre": "Historical Fiction", "timestamp": "EXAMPLE, no timestamp"},
+    {"title": "Ready Player One", "author": "Ernest Cline", "genre": "Science Fiction", "timestamp": "EXAMPLE, no timestamp"}
+]
