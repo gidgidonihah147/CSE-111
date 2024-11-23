@@ -1,1 +1,14 @@
-[{"title": "The Lord of the Rings", "author": "J.R.R. Tolkien", "genre": "Fantasy", "timestamp": "2024-11-11 18:00:00"}, {"title": "Harry Potter and the Philosopher's Stone", "author": "J.K. Rowling", "genre": "Fantasy", "timestamp": "2024-11-11 18:00:00"}]
+[
+    {
+        "title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "genre": "Fantasy",
+        "timestamp": "2024-11-11 18:00:00"
+    },
+    {
+        "title": "Harry Potter and the Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "genre": "Fantasy",
+        "timestamp": "2024-11-11 18:00:00"
+    }
+]
