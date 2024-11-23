@@ -55,7 +55,27 @@
 # "H020"	["H020", "aluminum foil", 2.39]
 # "H021"	["H021", "12 oz dish soap", 3.19]
 # "H025"	["H025", "toilet cleaner", 4.50]
+
+#-----------------WEEK 10 ASSIGNMENT---------------#
+# Problem Statement§
+# A local grocery store subscribes to an online service that enables its customers to order groceries online. After a customer completes an order, the online service sends a CSV file that contains the customer’s requests to the grocery store. The store needs you to write a program that reads the CSV file and prints to the terminal window a receipt that lists the purchased items and shows the subtotal, the sales tax amount, and the total.
+
+# Assignment
+# During the prove milestone for the previous lesson, you wrote the part of this program that reads and processes two CSV files, one named products.csv that contains a catalog of products and one named request.csv that contains a customer’s order. During this prove assignment, you will add code to finish printing a receipt and to handle any exceptions that might occur while your program is running. Specifically, your program must do the following:
+
+# Print the store name at the top of the receipt.
+# Print the list of ordered items.
+# Sum and print the number of ordered items.
+# Sum and print the subtotal due.
+# Compute and print the sales tax amount. Use 6% as the sales tax rate.
+# Compute and print the total amount due.
+# Print a thank you message.
+# Get the current date and time from your computer’s operating system and print the current date and time.
+# Include a try block and except blocks to handle FileNotFoundError and KeyError.
+
 import csv
+import random
+from datetime import datetime, timedelta
 
 def read_dictionary(filename, key_column_index):
     """Read the contents of a CSV file into a compound
@@ -92,30 +112,97 @@ def read_dictionary(filename, key_column_index):
 # Print the product name, requested quantity, and product price.
 # Because product number D083 appears twice in the request.csv file, your program must not read the request.csv file into a dictionary. Recall that each key in a dictionary is unique. If your program reads the request.csv file into a dictionary, when your program reads line 3 of the request.csv file, your program will put a request for four yogurts into the dictionary. Then when your program reads line 6 of the request.csv file, your program will replace the request for four yogurts with a request for three yogurts. In other words, if your program reads the request.csv file into a dictionary, your program will think that the customer ordered only three yogurts instead of the seven (4 + 3) that he ordered. Therefore, your program must not read the request.csv file into a dictionary but should instead read and process each row similar to example 3 in the preparation content for this lesson.
 def main():
-    products_dict = read_dictionary("products.csv", 0)
-    print("Products")
-    print(products_dict)
+    try:
+        products_dict = read_dictionary("products.csv", 0)
+        if products_dict is None:
+            return  # Exit if there was an error reading the file
 
-    # Open the request.csv file for reading.
-    with open("request.csv", "rt") as request_file:
-        reader = csv.reader(request_file)
-        next(reader)
+        print("\nMy Store!\n")  # Print the store name
+
+        # Open the request.csv file for reading.
+        with open("request.csv", "rt") as request_file:
+            reader = csv.reader(request_file)
+            next (reader)
 
 
-        # Use a loop that reads and processes each row from the request.csv file.
-        print("\nRequested Items")
-        for row_list in reader:
-            product_number = row_list[0]
-            quantity = int(row_list[1])
+            total_items = 0
+            subtotal = 0
 
-            # Use the requested product number to find the corresponding item in the products_dict.
-            if product_number in products_dict:
-                product = products_dict[product_number]
-                product_name = product[1]
-                product_price = float(product[2])
+            print("Requested Items")
+            for row_list in reader:
+                product_number = row_list[0]
+                quantity = int(row_list[1])
 
-                # Print the product name, requested quantity, and product price.
-                print(f"{product_name}: {quantity} @ ${product_price:.2f}")
+                # Use the requested product number to find the corresponding item in the products_dict.
+                if product_number in products_dict:
+                    product = products_dict[product_number]
+                    product_name = product[1]
+                    product_price = float(product[2])
+
+
+                    # Calculate item total and add to subtotal
+                    item_total = quantity * product_price
+                    subtotal += item_total
+
+                    # Print the product name, requested quantity, and product price.
+                    print(f"{product_name}: {quantity} @ ${product_price:.2f} = ${item_total:.2f}")
+
+                    total_items += quantity
+                else:
+                    print(f"Error: Product number '{product_number}' not found in products.csv.")
+
+            # Calculate sales tax and total
+            sales_tax_rate = 0.06
+            sales_tax = subtotal * sales_tax_rate
+            total = subtotal + sales_tax
+
+            # Print the receipt summary
+            print(f"\nNumber of Items: {total_items}")
+            print(f"Subtotal: ${subtotal:.2f}")
+            print(f"Sales Tax: ${sales_tax:.2f}")
+            print(f"Total: ${total:.2f}")
+
+            # Print a thank you message and current date and time
+            current_date_and_time = datetime.now()
+            print("\nThank you for shopping at my store!")
+            print(f"{current_date_and_time:%a %b %e %H:%M:%S %Y}")
+
+                        # --- Stretch Goals ---
+
+            # Survey invitation
+            print("\nComplete our online survey and receive 10% off your next purchase:")
+            print("https://www.mystore.com/survey")
+
+            # Coupon for a random ordered item
+            with open("request.csv", "rt") as request_file:
+                reader = csv.reader(request_file)
+                next(reader)
+                ordered_items = list(reader)
+            random_item = random.choice(ordered_items)
+            print("\nCoupon for your next purchase:")
+            print(f"Product: {random_item[0]}")
+            print("Discount: 15% off")
+
+            # Return by date (7 days from now)
+            return_by_date = current_date_and_time + timedelta(days=7)
+            print(f"\nReturn by date: {return_by_date:%a %b %e %H:%M:%S %Y}")
+
+            # Days until New Year's Sale
+            new_years_day = datetime(current_date_and_time.year + 1, 1, 1)
+            days_until_new_years = (new_years_day - current_date_and_time).days
+            print(f"\nDays until New Year's Sale: {days_until_new_years}")
+
+            # Discount on Tuesdays and Wednesdays
+            if current_date_and_time.weekday() in [1, 2]:  # 1 is Tuesday, 2 is Wednesday
+                discount = 0.10  # 10% discount
+                print("\nSpecial discount applied: 10%")
+            # Discount before 11:00 a.m.
+            elif current_date_and_time.hour < 11:
+                discount = 0.10  # 10% discount
+                print("\nMorning discount applied: 10%")
+
+    except KeyError as e:
+        print(f"Error: Invalid key '{e}' in dictionary lookup.")
 
 #-----------------Week 09 - Step 7---------------#
 # At the bottom of your receipt.py file, add a call to the main function. Be certain to protect the call to main with an if statement as taught in the preparation content for lesson 5.
