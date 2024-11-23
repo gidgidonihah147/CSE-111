@@ -167,13 +167,20 @@ def main():
             print("\nThank you for shopping at my store!")
             print(f"{current_date_and_time:%a %b %e %H:%M:%S %Y}")
 
-                        # --- Stretch Goals ---
+            #-----------------Week 10 - Stretch Goals---------------#
+            # If your program fulfills the requirements for this assignment as described in the previous prove milestone and the Assignment section above, your program will earn 93% of the possible points. In order to earn the remaining 7% of points, you will need to add one or more features to your program so that it exceeds the requirements. Here are a few suggestions for additional features that you could add to your program if you wish.
 
-            # Survey invitation
+
+
+            #-----------------Week 10 - Stretch Goal 1 - Online Survey---------------#
+            # Write code to print at the bottom of the receipt an invitation for the customer to complete an online survey.
+
             print("\nComplete our online survey and receive 10% off your next purchase:")
             print("https://www.mystore.com/survey")
 
-            # Coupon for a random ordered item
+            #-----------------Week 10 - Stretch Goal 2 - Coupon for purchase---------------#
+            # Write code to print a coupon at the bottom of the receipt. Write the code so that it will always print a coupon for one of the products ordered by the customer.
+
             with open("request.csv", "rt") as request_file:
                 reader = csv.reader(request_file)
                 next(reader)
@@ -183,20 +190,28 @@ def main():
             print(f"Product: {random_item[0]}")
             print("Discount: 15% off")
 
-            # Return by date (7 days from now)
+            #-----------------Week 10 - Stretch Goal 3 - Return Date---------------#
+            # Write code to print at the bottom of the receipt the return by date that is seven days into the future.
+
             return_by_date = current_date_and_time + timedelta(days=7)
             print(f"\nReturn by date: {return_by_date:%a %b %e %H:%M:%S %Y}")
 
-            # Days until New Year's Sale
+            #-----------------Week 10 - Stretch Goal 4 - New Year's Sale Time---------------#
+            # Write code to print at the bottom of the receipt the number of days until the New Year's Sale begins (January 1).
+
             new_years_day = datetime(current_date_and_time.year + 1, 1, 1)
             days_until_new_years = (new_years_day - current_date_and_time).days
             print(f"\nDays until New Year's Sale: {days_until_new_years}")
 
-            # Discount on Tuesdays and Wednesdays
+            #-----------------Week 10 - Stretch Goal 5 - Tues & Wed Discounts---------------#
+            # Write code to discount the product prices by 10% if today is Tuesday or Wednesday.
+
             if current_date_and_time.weekday() in [1, 2]:  # 1 is Tuesday, 2 is Wednesday
                 discount = 0.10  # 10% discount
                 print("\nSpecial discount applied: 10%")
-            # Discount before 11:00 a.m.
+            #-----------------Week 10 - Stretch Goal 6 - Morning Discount---------------#
+            # Write code to discount the product prices by 10% if the current time of day is before 11:00 a.m.
+
             elif current_date_and_time.hour < 11:
                 discount = 0.10  # 10% discount
                 print("\nMorning discount applied: 10%")
