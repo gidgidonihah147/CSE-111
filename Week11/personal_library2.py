@@ -394,7 +394,7 @@ def main():
 
     # Set the width of the root window and make it non-resizable
     root.geometry(f"{content_width}x{root.winfo_height()}")
-    root.resizable(False, True)  # Disable resizing
+    root.resizable(False, False)  # Disable resizing
 
     # Center the window on the screen
     root.update_idletasks()  # Update the window to get its actual size
