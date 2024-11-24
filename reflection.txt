@@ -1,0 +1,23 @@
+Please respond thoroughly (at least two sentences for each question) to
+the following three questions.
+
+1. Describe an experience you had this semester where you saw the power of
+functions.
+Most of the coding that I have done is for web development. So I havent done much in python before this course. Learning python wasnt a big leap from what Ive done so far. 
+The biggest change was unsterstanding how the formatting of python worked, making sure everything was indented as intended. 
+I know its kinda off point from what most people will say. But to me a huge power of functions is the ability to organize your program and split it into easily identifiable pieces.
+It makes a difference in evertyhing. From adding new functions, to debugging already written functions. Breaking the code out in functions, helped me maintain the formatting needed for Python in a much easier process.
+
+
+2. In your judgment, what is the value of test functions?
+I can see two main values for test functions. 
+A - Validate that your program is functioning the way that its expected to. Especially as you add or change pieces of your program. If you make adjustments and break a part of your program that you didnt intend to make changes on, the test will help you find that even if the code successfully runs.
+B - To help explain your intended outcome of different pieces of your program. In writing a test, anyone reviewing your code will understand how it should work, and then can start working on your code quicker.
+
+3. Describe your process for troubleshooting and fixing a program that
+has a problem. What is one thing you can do to improve your process?
+First and foremost, I go through the VScode error messages that generate. They generally point you in the right direction of where to start. If I dont understand what its saying, a quick google of common fixes resolves that.
+Second, I look to see if any of my variables are not being used as I inteded as that is the most common error that I ran into when working through this semester.
+Third, I go look at the provided support from the class. If its for something outside of schooling, I go make sure I understand the basis of the process I'm attempting to use, so I turn to the languages official documentation. If that fails, a quick youtube video to walk me through the steps.
+Last, I reach out to others for support. I didnt need to do that for this semester, but I have needed to for other course. I try to spend max 30 minutes on each step above before moving onto the next. So I do everything I can to be self sufficient, but that I dont bang my head against the wall for hours when someone else could help in a matter of minutes.
+This is the same process that I use for work or non programming processes, and I think it really works well for me. If you have suggestions on how I could improve it, I would love to hear it.
